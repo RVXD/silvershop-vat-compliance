@@ -1,0 +1,8 @@
+---
+Name: silvershop-vat-compliance
+After:
+  - '#shopconfig'
+---
+SilverStripe\SiteConfig\SiteConfig:
+  extensions:
+    - SilverShop\VatCompliance\Extension\SiteConfigVatExtension

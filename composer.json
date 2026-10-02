@@ -1,0 +1,68 @@
+{
+    "name": "silvershop/vat-compliance",
+    "description": "VAT compliance layer for SilverShop (EU first). v1: tax shipping at a configurable rate. Builds on core's TaxClass; integrates with silvershop/invoicing's per-rate VAT breakdown when present.",
+    "type": "silverstripe-vendormodule",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "silverstripe",
+        "silvershop",
+        "ecommerce",
+        "shop",
+        "vat",
+        "tax",
+        "compliance",
+        "shipping"
+    ],
+    "authors": [
+        {
+            "name": "Remy van Aartjes",
+            "email": "remy@xd.nl"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "silverstripe/framework": "^6",
+        "silvershop/core": "^6"
+    },
+    "require-dev": {
+        "cambis/silverstan": "^2.1",
+        "silverstripe/recipe-testing": "^4",
+        "silverstripe/sqlite3": "^4",
+        "squizlabs/php_codesniffer": "^3.0"
+    },
+    "suggest": {
+        "silvershop/invoicing": "Builds the per-rate VAT breakdown on invoices/credit memos; taxed shipping is folded into it.",
+        "silvershop/shipping": "Provides the ShippingFrameworkModifier that the shipping tax class applies to by default."
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev",
+    "extra": {
+        "branch-alias": {
+            "dev-main": "1.x-dev"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "SilverShop\\VatCompliance\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SilverShop\\VatCompliance\\Tests\\": "tests/php/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "silverstripe/recipe-plugin": true,
+            "silverstripe/vendor-plugin": true
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test:coverage": "vendor/bin/phpunit --coverage-html coverage --coverage-text",
+        "stan": "vendor/bin/phpstan analyse --configuration=phpstan.neon --memory-limit=-1",
+        "lint": "vendor/bin/phpcs",
+        "lint:fix": "vendor/bin/phpcbf"
+    }
+}

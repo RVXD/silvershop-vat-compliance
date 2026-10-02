@@ -1,0 +1,6 @@
+en:
+  SilverShop\VatCompliance\Extension\SiteConfigVatExtension:
+    VAT: 'VAT'
+    ShippingTaxClass: 'Shipping tax class'
+    NoShippingTax: '(shipping not taxed)'
+    ShippingTaxClassDesc: 'Tax delivery/shipping charges at this rate. Leave empty to keep shipping untaxed.'
