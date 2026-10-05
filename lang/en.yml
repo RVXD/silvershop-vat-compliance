@@ -13,6 +13,8 @@ en:
     RequestId: 'VIES request ID'
   SilverShop\VatCompliance\Modifier\ReverseChargeModifier:
     TableTitle: 'VAT reverse-charged'
+  SilverShop\VatCompliance\Extension\InvoiceVatExtension:
+    Note: 'VAT reverse-charged — the customer accounts for VAT (EU intra-community supply, Art. 196 Directive 2006/112/EC).'
   SilverShop\VatCompliance\Checkout\VatNumberCheckout:
     VATNumber: 'VAT number (EU businesses)'
     Help: 'EU businesses: enter your VAT number to have VAT reverse-charged where applicable. Leave blank otherwise.'
