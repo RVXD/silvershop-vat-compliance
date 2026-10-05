@@ -46,7 +46,7 @@ class ReverseChargeModifier extends OrderModifier
         $items = $order->Items();
         $itemGross = 0.0;
         foreach ($items as $item) {
-            $itemGross += (float) $item->Total();
+            $itemGross += (float) (string) $item->Total();
         }
         $discount = $this->orderDiscount($order);
 
@@ -56,7 +56,7 @@ class ReverseChargeModifier extends OrderModifier
             if ($rate <= 0) {
                 continue;
             }
-            $gross = (float) $item->Total();
+            $gross = (float) (string) $item->Total();
             $taxable = $itemGross > 0 ? $gross - ($gross / $itemGross) * $discount : $gross;
             $vat += $taxable - round($taxable / (1 + $rate), $precision);
         }
@@ -93,7 +93,7 @@ class ReverseChargeModifier extends OrderModifier
     private function shippingVat(Order $order, int $precision): float
     {
         $config = SiteConfig::current_site_config();
-        $rate = $config && $config->hasMethod('getShippingTaxRate') ? $config->getShippingTaxRate() : null;
+        $rate = $config->hasMethod('getShippingTaxRate') ? $config->getShippingTaxRate() : null;
         if (!$rate || $rate <= 0) {
             return 0.0;
         }

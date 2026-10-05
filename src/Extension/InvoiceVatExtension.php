@@ -57,7 +57,8 @@ class InvoiceVatExtension extends Extension
 
         return _t(
             self::class . '.Note',
-            'VAT reverse-charged — the customer accounts for VAT (EU intra-community supply, Art. 196 Directive 2006/112/EC).'
+            'VAT reverse-charged — the customer accounts for VAT '
+            . '(EU intra-community supply, Art. 196 Directive 2006/112/EC).'
         );
     }
 }

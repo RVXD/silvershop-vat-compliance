@@ -84,7 +84,7 @@ class OrderVatExtension extends Extension
         }
 
         $config = SiteConfig::current_site_config();
-        $code = $config && $config->hasField('StoreCountryCode') ? (string) $config->StoreCountryCode : '';
+        $code = $config->hasField('StoreCountryCode') ? (string) $config->StoreCountryCode : '';
 
         return $code !== '' ? strtoupper($code) : null;
     }

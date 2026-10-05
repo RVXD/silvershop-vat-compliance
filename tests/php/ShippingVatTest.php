@@ -20,9 +20,9 @@ class ShippingVatTest extends SapphireTest
     protected $usesDatabase = true;
 
     protected static $extra_dataobjects = [
-        ShippingVatTest_Line::class,
-        ShippingVatTest_Shipping::class,
-        ShippingVatTest_Other::class,
+        ShippingVatTestLine::class,
+        ShippingVatTestShipping::class,
+        ShippingVatTestOther::class,
     ];
 
     private function setShippingRate(float $rate): void
@@ -65,12 +65,12 @@ class ShippingVatTest extends SapphireTest
         Config::modify()->set(
             TaxLineExtension::class,
             'shipping_modifier_classes',
-            [ShippingVatTest_Shipping::class]
+            [ShippingVatTestShipping::class]
         );
         $this->setShippingRate(0.21);
 
-        $line = ShippingVatTest_Line::create();
-        $line->updateSnapshotLine(ShippingVatTest_Shipping::create(), null);
+        $line = ShippingVatTestLine::create();
+        $line->updateSnapshotLine(ShippingVatTestShipping::create(), null);
 
         $this->assertEqualsWithDelta(0.21, (float) $line->TaxRate, 0.0001, 'Shipping line gets the configured rate');
     }
@@ -80,12 +80,12 @@ class ShippingVatTest extends SapphireTest
         Config::modify()->set(
             TaxLineExtension::class,
             'shipping_modifier_classes',
-            [ShippingVatTest_Shipping::class]
+            [ShippingVatTestShipping::class]
         );
         $this->setShippingRate(0.21);
 
-        $line = ShippingVatTest_Line::create();
-        $line->updateSnapshotLine(ShippingVatTest_Other::create(), null);
+        $line = ShippingVatTestLine::create();
+        $line->updateSnapshotLine(ShippingVatTestOther::create(), null);
 
         $this->assertEqualsWithDelta(0.0, (float) $line->TaxRate, 0.0001, 'A non-shipping source leaves TaxRate at 0');
     }
@@ -95,12 +95,12 @@ class ShippingVatTest extends SapphireTest
         Config::modify()->set(
             TaxLineExtension::class,
             'shipping_modifier_classes',
-            [ShippingVatTest_Shipping::class]
+            [ShippingVatTestShipping::class]
         );
         // No shipping tax class set on SiteConfig.
 
-        $line = ShippingVatTest_Line::create();
-        $line->updateSnapshotLine(ShippingVatTest_Shipping::create(), null);
+        $line = ShippingVatTestLine::create();
+        $line->updateSnapshotLine(ShippingVatTestShipping::create(), null);
 
         $this->assertEqualsWithDelta(0.0, (float) $line->TaxRate, 0.0001, 'No shipping class -> line stays untaxed');
     }
@@ -110,9 +110,9 @@ class ShippingVatTest extends SapphireTest
  * Stands in for an invoicing ShopInvoiceLine/ShopCreditMemoLine so the extension can be tested without
  * a hard dependency on silvershop/invoicing.
  */
-class ShippingVatTest_Line extends DataObject implements TestOnly
+class ShippingVatTestLine extends DataObject implements TestOnly
 {
-    private static string $table_name = 'ShippingVatTest_Line';
+    private static string $table_name = 'ShippingVatTestLine';
 
     private static array $db = [
         'TaxRate' => 'Decimal(6,4)',
@@ -126,15 +126,15 @@ class ShippingVatTest_Line extends DataObject implements TestOnly
 /**
  * Stands in for a shipping OrderModifier (its class is listed in shipping_modifier_classes).
  */
-class ShippingVatTest_Shipping extends DataObject implements TestOnly
+class ShippingVatTestShipping extends DataObject implements TestOnly
 {
-    private static string $table_name = 'ShippingVatTest_Shipping';
+    private static string $table_name = 'ShippingVatTestShipping';
 }
 
 /**
  * Stands in for a non-shipping modifier / order item (its class is NOT listed).
  */
-class ShippingVatTest_Other extends DataObject implements TestOnly
+class ShippingVatTestOther extends DataObject implements TestOnly
 {
-    private static string $table_name = 'ShippingVatTest_Other';
+    private static string $table_name = 'ShippingVatTestOther';
 }

@@ -11,7 +11,10 @@
     <arg name="colors"/>
     <arg value="p"/>
 
-    <rule ref="PSR12"/>
+    <rule ref="PSR12">
+        <!-- SilverStripe template/contract methods are PascalCase by convention (e.g. ShowInTable()). -->
+        <exclude name="PSR1.Methods.CamelCapsMethodName"/>
+    </rule>
 
     <!-- SilverStripe test bootstrap: global Page/PageController stubs + require_once -->
     <rule ref="PSR1.Classes.ClassDeclaration.MissingNamespace">

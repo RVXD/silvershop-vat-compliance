@@ -50,7 +50,7 @@ class TaxLineExtension extends Extension
         }
 
         $config = SiteConfig::current_site_config();
-        $rate = ($config && $config->hasMethod('getShippingTaxRate')) ? $config->getShippingTaxRate() : null;
+        $rate = $config->hasMethod('getShippingTaxRate') ? $config->getShippingTaxRate() : null;
 
         if ($rate !== null && $rate > 0) {
             $this->getOwner()->TaxRate = $rate;

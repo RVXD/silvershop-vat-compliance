@@ -27,7 +27,8 @@ class VatNumberCheckout extends CheckoutComponent
             TextField::create('VATNumber', _t(self::class . '.VATNumber', 'VAT number (EU businesses)'))
                 ->setDescription(_t(
                     self::class . '.Help',
-                    'EU businesses: enter your VAT number to have VAT reverse-charged where applicable. Leave blank otherwise.'
+                    'EU businesses: enter your VAT number to have VAT reverse-charged where applicable. '
+                    . 'Leave blank otherwise.'
                 ))
         );
     }
