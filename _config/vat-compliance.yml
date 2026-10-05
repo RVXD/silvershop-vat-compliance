@@ -6,3 +6,17 @@ After:
 SilverStripe\SiteConfig\SiteConfig:
   extensions:
     - SilverShop\VatCompliance\Extension\SiteConfigVatExtension
+
+SilverStripe\Core\Injector\Injector:
+  # Default VIES transport (swap the class to stub VIES in an environment that can't reach it).
+  SilverShop\VatCompliance\Vat\ViesLookup:
+    class: SilverShop\VatCompliance\Vat\CurlViesLookup
+  # Dedicated cache pool for validated VAT numbers.
+  Psr\SimpleCache\CacheInterface.vatComplianceVies:
+    factory: SilverStripe\Core\Cache\CacheFactory
+    constructor:
+      namespace: vatComplianceVies
+  SilverShop\VatCompliance\Vat\ViesValidator:
+    constructor:
+      - '%$SilverShop\VatCompliance\Vat\ViesLookup'
+      - '%$Psr\SimpleCache\CacheInterface.vatComplianceVies'
