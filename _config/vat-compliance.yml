@@ -10,6 +10,9 @@ SilverStripe\SiteConfig\SiteConfig:
 SilverShop\Model\Order:
   extensions:
     - SilverShop\VatCompliance\Extension\OrderVatExtension
+  # Removes embedded VAT from reverse-charged orders. Must run after the shipping modifier (keep it last).
+  modifiers:
+    - SilverShop\VatCompliance\Modifier\ReverseChargeModifier
 
 SilverStripe\Core\Injector\Injector:
   # Default VIES transport (swap the class to stub VIES in an environment that can't reach it).
