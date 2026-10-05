@@ -11,3 +11,8 @@ en:
     ReverseCharge: 'Reverse charge'
     CheckedAt: 'Checked at'
     RequestId: 'VIES request ID'
+  SilverShop\VatCompliance\Checkout\VatNumberCheckout:
+    VATNumber: 'VAT number (EU businesses)'
+    Help: 'EU businesses: enter your VAT number to have VAT reverse-charged where applicable. Leave blank otherwise.'
+    Malformed: 'That does not look like a valid VAT number.'
+    NotRecognised: 'VIES did not recognise this VAT number. Leave it blank if you are not a business.'

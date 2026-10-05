@@ -24,3 +24,6 @@ SilverStripe\Core\Injector\Injector:
     constructor:
       - '%$SilverShop\VatCompliance\Vat\ViesLookup'
       - '%$Psr\SimpleCache\CacheInterface.vatComplianceVies'
+  # Add the VAT-number field to single-page checkout. Remove/re-point this to opt out.
+  SilverShop\Checkout\SinglePageCheckoutComponentConfig:
+    class: SilverShop\VatCompliance\Checkout\VatAwareSinglePageCheckoutComponentConfig
