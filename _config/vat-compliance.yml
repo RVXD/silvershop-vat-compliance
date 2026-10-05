@@ -7,6 +7,10 @@ SilverStripe\SiteConfig\SiteConfig:
   extensions:
     - SilverShop\VatCompliance\Extension\SiteConfigVatExtension
 
+SilverShop\Model\Order:
+  extensions:
+    - SilverShop\VatCompliance\Extension\OrderVatExtension
+
 SilverStripe\Core\Injector\Injector:
   # Default VIES transport (swap the class to stub VIES in an environment that can't reach it).
   SilverShop\VatCompliance\Vat\ViesLookup:

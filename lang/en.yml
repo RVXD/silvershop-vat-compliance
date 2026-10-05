@@ -4,3 +4,10 @@ en:
     ShippingTaxClass: 'Shipping tax class'
     NoShippingTax: '(shipping not taxed)'
     ShippingTaxClassDesc: 'Tax delivery/shipping charges at this rate. Leave empty to keep shipping untaxed.'
+  SilverShop\VatCompliance\Extension\OrderVatExtension:
+    VATNumber: 'VAT number'
+    Status: 'VIES status'
+    Name: 'VIES-registered name'
+    ReverseCharge: 'Reverse charge'
+    CheckedAt: 'Checked at'
+    RequestId: 'VIES request ID'
