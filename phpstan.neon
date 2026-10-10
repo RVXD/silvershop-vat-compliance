@@ -5,11 +5,12 @@ parameters:
     level: 5
     paths:
         - src
-    # InvoiceVatExtension integrates with silvershop/invoicing, a suggested (not required) dependency that
-    # isn't installed in CI, so its ShopInvoice types can't be resolved here. It is covered by integration
-    # tests when invoicing is present.
+    # These integrate with silvershop/invoicing, a suggested (not required) dependency that isn't
+    # installed in CI, so its ShopInvoice/ShopInvoiceLine types can't be resolved here. They are covered
+    # by integration tests when invoicing is present.
     excludePaths:
         - src/Extension/InvoiceVatExtension.php
+        - src/Report/VatByRateReport.php
     treatPhpDocTypesAsCertain: false
     silverstan:
         includeTestOnly: true

@@ -1,0 +1,19 @@
+es:
+  SilverShop\VatCompliance\Report\VatByRateReport:
+    TITLE: 'IVA por tipo'
+    DESC: 'IVA recaudado por tipo impositivo durante un periodo, a partir de las facturas emitidas.'
+    Start: 'Desde (fecha de factura)'
+    End: 'Hasta (fecha de factura)'
+    ColRate: 'Tipo'
+    ColNet: 'Base'
+    ColVat: 'IVA'
+    ColGross: 'Bruto'
+  SilverShop\VatCompliance\Report\ReverseChargeReport:
+    TITLE: 'Pedidos con inversión del sujeto pasivo'
+    DESC: 'Pedidos B2B intracomunitarios con inversión del sujeto pasivo, durante un periodo.'
+    Start: 'Desde (fecha de pedido)'
+    End: 'Hasta (fecha de pedido)'
+    ColOrder: 'Pedido'
+    ColCustomer: 'Cliente'
+    ColVatNumber: 'Número de IVA'
+    ColTotal: 'Total'

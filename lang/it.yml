@@ -1,0 +1,19 @@
+it:
+  SilverShop\VatCompliance\Report\VatByRateReport:
+    TITLE: 'IVA per aliquota'
+    DESC: 'IVA riscossa per aliquota fiscale in un periodo, dalle fatture emesse.'
+    Start: 'Dal (data fattura)'
+    End: 'Al (data fattura)'
+    ColRate: 'Aliquota'
+    ColNet: 'Imponibile'
+    ColVat: 'IVA'
+    ColGross: 'Lordo'
+  SilverShop\VatCompliance\Report\ReverseChargeReport:
+    TITLE: 'Ordini in reverse charge'
+    DESC: 'Ordini B2B intra-UE con IVA in reverse charge, in un periodo.'
+    Start: 'Dal (data ordine)'
+    End: 'Al (data ordine)'
+    ColOrder: 'Ordine'
+    ColCustomer: 'Cliente'
+    ColVatNumber: 'Partita IVA'
+    ColTotal: 'Totale'

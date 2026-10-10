@@ -1,0 +1,19 @@
+nl:
+  SilverShop\VatCompliance\Report\VatByRateReport:
+    TITLE: 'Btw per tarief'
+    DESC: 'Geïnde btw per belastingtarief voor een periode, op basis van uitgegeven facturen.'
+    Start: 'Vanaf (factuurdatum)'
+    End: 'Tot (factuurdatum)'
+    ColRate: 'Tarief'
+    ColNet: 'Netto'
+    ColVat: 'Btw'
+    ColGross: 'Bruto'
+  SilverShop\VatCompliance\Report\ReverseChargeReport:
+    TITLE: 'Bestellingen met verlegde btw'
+    DESC: 'B2B intra-EU-bestellingen met verlegde btw, voor een periode.'
+    Start: 'Vanaf (besteldatum)'
+    End: 'Tot (besteldatum)'
+    ColOrder: 'Bestelling'
+    ColCustomer: 'Klant'
+    ColVatNumber: 'Btw-nummer'
+    ColTotal: 'Totaal'

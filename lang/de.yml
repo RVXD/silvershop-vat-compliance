@@ -1,0 +1,19 @@
+de:
+  SilverShop\VatCompliance\Report\VatByRateReport:
+    TITLE: 'MwSt. nach Satz'
+    DESC: 'Erhobene MwSt. pro Steuersatz für einen Zeitraum, aus ausgestellten Rechnungen.'
+    Start: 'Von (Rechnungsdatum)'
+    End: 'Bis (Rechnungsdatum)'
+    ColRate: 'Satz'
+    ColNet: 'Netto'
+    ColVat: 'MwSt.'
+    ColGross: 'Brutto'
+  SilverShop\VatCompliance\Report\ReverseChargeReport:
+    TITLE: 'Bestellungen mit Reverse-Charge'
+    DESC: 'B2B-Bestellungen innerhalb der EU mit Reverse-Charge, für einen Zeitraum.'
+    Start: 'Von (Bestelldatum)'
+    End: 'Bis (Bestelldatum)'
+    ColOrder: 'Bestellung'
+    ColCustomer: 'Kunde'
+    ColVatNumber: 'USt-IdNr.'
+    ColTotal: 'Gesamt'

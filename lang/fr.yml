@@ -1,0 +1,19 @@
+fr:
+  SilverShop\VatCompliance\Report\VatByRateReport:
+    TITLE: 'TVA par taux'
+    DESC: 'TVA collectée par taux de taxe sur une période, à partir des factures émises.'
+    Start: 'Du (date de facture)'
+    End: 'Au (date de facture)'
+    ColRate: 'Taux'
+    ColNet: 'Montant HT'
+    ColVat: 'TVA'
+    ColGross: 'Montant TTC'
+  SilverShop\VatCompliance\Report\ReverseChargeReport:
+    TITLE: 'Commandes en autoliquidation'
+    DESC: 'Commandes B2B intra-UE avec TVA en autoliquidation, sur une période.'
+    Start: 'Du (date de commande)'
+    End: 'Au (date de commande)'
+    ColOrder: 'Commande'
+    ColCustomer: 'Client'
+    ColVatNumber: 'Numéro de TVA'
+    ColTotal: 'Total'
