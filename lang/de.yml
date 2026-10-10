@@ -1,4 +1,25 @@
 de:
+  SilverShop\VatCompliance\Extension\SiteConfigVatExtension:
+    VAT: 'USt.'
+    ShippingTaxClass: 'Steuerklasse Versand'
+    NoShippingTax: '(Versand nicht besteuert)'
+    ShippingTaxClassDesc: 'Versandkosten mit diesem Satz besteuern. Leer lassen, um den Versand unbesteuert zu lassen.'
+  SilverShop\VatCompliance\Extension\OrderVatExtension:
+    VATNumber: 'USt-IdNr.'
+    Status: 'VIES-Status'
+    Name: 'Bei VIES registrierter Name'
+    ReverseCharge: 'Reverse-Charge'
+    CheckedAt: 'Geprüft am'
+    RequestId: 'VIES-Anfrage-ID'
+  SilverShop\VatCompliance\Modifier\ReverseChargeModifier:
+    TableTitle: 'USt. im Reverse-Charge-Verfahren'
+  SilverShop\VatCompliance\Extension\InvoiceVatExtension:
+    Note: 'Steuerschuldnerschaft des Leistungsempfängers — der Kunde schuldet die USt. (innergemeinschaftliche Lieferung, Art. 196 Richtlinie 2006/112/EG).'
+  SilverShop\VatCompliance\Checkout\VatNumberCheckout:
+    VATNumber: 'USt-IdNr. (EU-Unternehmen)'
+    Help: 'EU-Unternehmen: Geben Sie Ihre USt-IdNr. ein, damit die USt. ggf. im Reverse-Charge-Verfahren abgerechnet wird. Andernfalls leer lassen.'
+    Malformed: 'Das sieht nicht nach einer gültigen USt-IdNr. aus.'
+    NotRecognised: 'VIES hat diese USt-IdNr. nicht erkannt. Lassen Sie das Feld leer, wenn Sie kein Unternehmen sind.'
   SilverShop\VatCompliance\Report\VatByRateReport:
     TITLE: 'MwSt. nach Satz'
     DESC: 'Erhobene MwSt. pro Steuersatz für einen Zeitraum, aus ausgestellten Rechnungen.'

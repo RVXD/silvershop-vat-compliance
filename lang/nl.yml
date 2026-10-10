@@ -1,4 +1,25 @@
 nl:
+  SilverShop\VatCompliance\Extension\SiteConfigVatExtension:
+    VAT: 'Btw'
+    ShippingTaxClass: 'Btw-tarief verzending'
+    NoShippingTax: '(verzending niet belast)'
+    ShippingTaxClassDesc: 'Belast verzendkosten tegen dit tarief. Laat leeg om verzending onbelast te houden.'
+  SilverShop\VatCompliance\Extension\OrderVatExtension:
+    VATNumber: 'Btw-nummer'
+    Status: 'VIES-status'
+    Name: 'Bij VIES geregistreerde naam'
+    ReverseCharge: 'Verlegde btw'
+    CheckedAt: 'Gecontroleerd op'
+    RequestId: 'VIES-aanvraag-ID'
+  SilverShop\VatCompliance\Modifier\ReverseChargeModifier:
+    TableTitle: 'Btw verlegd'
+  SilverShop\VatCompliance\Extension\InvoiceVatExtension:
+    Note: 'Btw verlegd — de klant draagt de btw af (intracommunautaire levering binnen de EU, art. 196 Richtlijn 2006/112/EG).'
+  SilverShop\VatCompliance\Checkout\VatNumberCheckout:
+    VATNumber: 'Btw-nummer (EU-bedrijven)'
+    Help: 'EU-bedrijven: voer uw btw-nummer in om de btw te laten verleggen waar van toepassing. Laat anders leeg.'
+    Malformed: 'Dit lijkt geen geldig btw-nummer.'
+    NotRecognised: 'VIES herkende dit btw-nummer niet. Laat het leeg als u geen bedrijf bent.'
   SilverShop\VatCompliance\Report\VatByRateReport:
     TITLE: 'Btw per tarief'
     DESC: 'Geïnde btw per belastingtarief voor een periode, op basis van uitgegeven facturen.'

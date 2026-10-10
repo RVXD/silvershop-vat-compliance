@@ -1,4 +1,25 @@
 it:
+  SilverShop\VatCompliance\Extension\SiteConfigVatExtension:
+    VAT: 'IVA'
+    ShippingTaxClass: 'Classe IVA spedizione'
+    NoShippingTax: '(spedizione non tassata)'
+    ShippingTaxClassDesc: 'Applica l''IVA alle spese di spedizione a questa aliquota. Lascia vuoto per non tassare la spedizione.'
+  SilverShop\VatCompliance\Extension\OrderVatExtension:
+    VATNumber: 'Partita IVA'
+    Status: 'Stato VIES'
+    Name: 'Nome registrato in VIES'
+    ReverseCharge: 'Inversione contabile'
+    CheckedAt: 'Verificato il'
+    RequestId: 'ID richiesta VIES'
+  SilverShop\VatCompliance\Modifier\ReverseChargeModifier:
+    TableTitle: 'IVA in inversione contabile'
+  SilverShop\VatCompliance\Extension\InvoiceVatExtension:
+    Note: 'Inversione contabile dell''IVA — il cliente assolve l''IVA (cessione intracomunitaria UE, art. 196 Direttiva 2006/112/CE).'
+  SilverShop\VatCompliance\Checkout\VatNumberCheckout:
+    VATNumber: 'Partita IVA (imprese UE)'
+    Help: 'Imprese UE: inserisci la partita IVA per applicare l''inversione contabile ove prevista. Altrimenti lascia vuoto.'
+    Malformed: 'Questo non sembra un numero di partita IVA valido.'
+    NotRecognised: 'VIES non ha riconosciuto questa partita IVA. Lascia vuoto se non sei un''impresa.'
   SilverShop\VatCompliance\Report\VatByRateReport:
     TITLE: 'IVA per aliquota'
     DESC: 'IVA riscossa per aliquota fiscale in un periodo, dalle fatture emesse.'

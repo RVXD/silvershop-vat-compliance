@@ -50,4 +50,5 @@ jobs:
           SS_DATABASE_CLASS: SQLite3Database
           SS_DATABASE_NAME: ss_test
           SS_SQLITE_DATABASE_PATH: ":memory:"
+          SS_PHPUNIT_FLUSH: '1'
         run: vendor/bin/phpunit

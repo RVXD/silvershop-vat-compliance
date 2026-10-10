@@ -1,4 +1,25 @@
 es:
+  SilverShop\VatCompliance\Extension\SiteConfigVatExtension:
+    VAT: 'IVA'
+    ShippingTaxClass: 'Clase de IVA de envío'
+    NoShippingTax: '(envío no gravado)'
+    ShippingTaxClassDesc: 'Gravar los gastos de envío a este tipo. Déjelo vacío para no gravar el envío.'
+  SilverShop\VatCompliance\Extension\OrderVatExtension:
+    VATNumber: 'Número de IVA'
+    Status: 'Estado VIES'
+    Name: 'Nombre registrado en VIES'
+    ReverseCharge: 'Inversión del sujeto pasivo'
+    CheckedAt: 'Comprobado el'
+    RequestId: 'ID de solicitud VIES'
+  SilverShop\VatCompliance\Modifier\ReverseChargeModifier:
+    TableTitle: 'IVA con inversión del sujeto pasivo'
+  SilverShop\VatCompliance\Extension\InvoiceVatExtension:
+    Note: 'Inversión del sujeto pasivo del IVA — el cliente declara el IVA (entrega intracomunitaria en la UE, art. 196 Directiva 2006/112/CE).'
+  SilverShop\VatCompliance\Checkout\VatNumberCheckout:
+    VATNumber: 'Número de IVA (empresas de la UE)'
+    Help: 'Empresas de la UE: introduzca su número de IVA para aplicar la inversión del sujeto pasivo cuando proceda. En caso contrario, déjelo vacío.'
+    Malformed: 'Esto no parece un número de IVA válido.'
+    NotRecognised: 'VIES no reconoció este número de IVA. Déjelo vacío si no es una empresa.'
   SilverShop\VatCompliance\Report\VatByRateReport:
     TITLE: 'IVA por tipo'
     DESC: 'IVA recaudado por tipo impositivo durante un periodo, a partir de las facturas emitidas.'

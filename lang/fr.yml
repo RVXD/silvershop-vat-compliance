@@ -1,4 +1,25 @@
 fr:
+  SilverShop\VatCompliance\Extension\SiteConfigVatExtension:
+    VAT: 'TVA'
+    ShippingTaxClass: 'Classe de TVA livraison'
+    NoShippingTax: '(livraison non taxée)'
+    ShippingTaxClassDesc: 'Taxer les frais de livraison à ce taux. Laisser vide pour ne pas taxer la livraison.'
+  SilverShop\VatCompliance\Extension\OrderVatExtension:
+    VATNumber: 'Numéro de TVA'
+    Status: 'Statut VIES'
+    Name: 'Nom enregistré dans VIES'
+    ReverseCharge: 'Autoliquidation'
+    CheckedAt: 'Vérifié le'
+    RequestId: 'ID de requête VIES'
+  SilverShop\VatCompliance\Modifier\ReverseChargeModifier:
+    TableTitle: 'TVA autoliquidée'
+  SilverShop\VatCompliance\Extension\InvoiceVatExtension:
+    Note: 'Autoliquidation de la TVA — le client est redevable de la TVA (livraison intracommunautaire, art. 196 directive 2006/112/CE).'
+  SilverShop\VatCompliance\Checkout\VatNumberCheckout:
+    VATNumber: 'Numéro de TVA (entreprises de l''UE)'
+    Help: 'Entreprises de l''UE : saisissez votre numéro de TVA pour bénéficier de l''autoliquidation le cas échéant. Sinon, laissez vide.'
+    Malformed: 'Cela ne ressemble pas à un numéro de TVA valide.'
+    NotRecognised: 'VIES n''a pas reconnu ce numéro de TVA. Laissez vide si vous n''êtes pas une entreprise.'
   SilverShop\VatCompliance\Report\VatByRateReport:
     TITLE: 'TVA par taux'
     DESC: 'TVA collectée par taux de taxe sur une période, à partir des factures émises.'
